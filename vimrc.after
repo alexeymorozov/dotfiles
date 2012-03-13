@@ -1,0 +1,19 @@
+set hidden
+
+set colorcolumn=120
+
+autocmd FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab nolist wrap
+
+let NERDSpaceDelims=1
+
+let g:ctrlp_working_path_mode = 0
+
+" Switching between windows
+nmap <silent> <C-h> :wincmd h<CR>
+nmap <silent> <C-j> :wincmd j<CR>
+nmap <silent> <C-k> :wincmd k<CR>
+nmap <silent> <C-l> :wincmd l<CR>
+
+set t_Co=16
+set background=dark
+colorscheme solarized

@@ -1,0 +1,6 @@
+[submodule "janus/php-html-indent.vim"]
+	path = janus/php-html-indent.vim
+	url = https://github.com/rekky/php-html-indent.vim.git
+[submodule "janus/PIV"]
+	path = janus/PIV
+	url = https://github.com/rekky/PIV.git
