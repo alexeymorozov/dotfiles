@@ -3,4 +3,4 @@
 	url = https://github.com/rekky/php-html-indent.vim.git
 [submodule "janus/PIV"]
 	path = janus/PIV
-	url = https://github.com/rekky/PIV.git
+	url = https://github.com/spf13/PIV.git
