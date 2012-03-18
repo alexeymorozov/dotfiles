@@ -8,6 +8,9 @@ let NERDSpaceDelims=1
 
 let g:ctrlp_working_path_mode = 0
 
+" mapping for git commit all with diff inside message window
+nmap <leader>ga :Gcommit -av<CR>
+
 " Switching between windows
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-j> :wincmd j<CR>
