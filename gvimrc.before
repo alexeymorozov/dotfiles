@@ -1,0 +1,2 @@
+" The system menu "$VIMRUNTIME/menu.vim" is not sourced.
+set guioptions-=M
