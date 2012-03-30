@@ -22,5 +22,5 @@ nmap <silent> <C-k> :wincmd k<CR>
 nmap <silent> <C-l> :wincmd l<CR>
 
 set t_Co=16
-set background=dark
+set background=light
 colorscheme solarized
