@@ -1,4 +1,5 @@
 # Author: Ryan Bates
+# Edited by: Rekky
 
 require 'rake'
 require 'erb'
@@ -47,6 +48,6 @@ def link_file(file)
     end
   else
     puts "linking ~/.#{file}"
-    system %Q{ln -s "$PWD/#{file}" "$HOME/.#{file}"}
+    system %Q{ln -sf "${PWD\#${HOME}/}/#{file}" "$HOME/.#{file}"}
   end
 end
