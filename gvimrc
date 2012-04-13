@@ -12,4 +12,8 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=b
 
-set gfn=Ubuntu\ Mono\ 16
+set gfn=Ubuntu\ Mono\ 14
+
+if filereadable($HOME . "/.gvimrc.local")
+	source $HOME/.gvimrc.local
+end
