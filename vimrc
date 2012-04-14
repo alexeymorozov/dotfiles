@@ -46,6 +46,7 @@ set smartcase   " ... unless they contain at least one capital letter
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 set wildignore+=.git,.realsync,.idea
+set wildignore+=*.png
 
 set backupdir=/tmp//    " where to put backup files.
 set directory=/tmp//    " where to put swap files.
