@@ -67,6 +67,7 @@ nmap <leader>gs :Gstatus<CR>
 nmap <leader>gd :Gdiff<CR>
 nmap <leader>ga :Gcommit -av<CR>
 
+nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>v :NERDTreeFind<CR>
 
 " Switching between windows
