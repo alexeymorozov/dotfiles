@@ -72,6 +72,8 @@ nmap <leader>ga :Gcommit -av<CR>
 nmap <leader>n :NERDTreeToggle<CR>
 nmap <leader>v :NERDTreeFind<CR>
 
+nmap <F5> :GundoToggle<CR>
+
 " Switching between windows
 nmap <silent> <C-h> :wincmd h<CR>
 nmap <silent> <C-j> :wincmd j<CR>
