@@ -26,6 +26,7 @@ Bundle 'cakebaker/scss-syntax.vim'
 Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-endwise'
+Bundle 'mileszs/ack.vim'
 
 filetype plugin indent on
 
