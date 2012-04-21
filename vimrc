@@ -65,12 +65,12 @@ let NERDSpaceDelims=1
 
 let g:ctrlp_working_path_mode = 0
 
-nmap <leader>gs :Gstatus<CR>
-nmap <leader>gd :Gdiff<CR>
-nmap <leader>ga :Gcommit -av<CR>
+nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gd :Gdiff<CR>
+nmap <Leader>ga :Gcommit -av<CR>
 
-nmap <leader>n :NERDTreeToggle<CR>
-nmap <leader>v :NERDTreeFind<CR>
+nmap <Leader>n :NERDTreeToggle<CR>
+nmap <Leader>v :NERDTreeFind<CR>
 
 nmap <F5> :GundoToggle<CR>
 
@@ -99,10 +99,10 @@ nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
 imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
 
 " upper/lower word
-nmap <leader>u mQviwU`Q
-nmap <leader>l mQviwu`Q
+nmap <Leader>u mQviwU`Q
+nmap <Leader>l mQviwu`Q
 
-nmap <leader>so :so %<CR>
+nmap <Leader>so :so %<CR>
 
 set t_Co=16
 set background=light
