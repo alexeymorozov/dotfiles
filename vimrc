@@ -79,10 +79,10 @@ nmap <Leader>v :NERDTreeFind<CR>
 nmap <F5> :GundoToggle<CR>
 
 " Switching between windows
-nmap <silent> <C-h> :wincmd h<CR>
-nmap <silent> <C-j> :wincmd j<CR>
-nmap <silent> <C-k> :wincmd k<CR>
-nmap <silent> <C-l> :wincmd l<CR>
+nmap <C-H> <C-W>h
+nmap <C-J> <C-W>j
+nmap <C-K> <C-W>k
+nmap <C-L> <C-W>l
 
 if has("autocmd")
   " Remember last location in file, but not for commit messages.
