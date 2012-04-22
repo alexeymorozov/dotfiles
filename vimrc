@@ -51,6 +51,9 @@ nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 set wildignore+=.git,.realsync,.idea
 set wildignore+=*.png
 
+" Ignore bundler and sass cache
+set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
+
 set backupdir=/tmp//    " where to put backup files.
 set directory=/tmp//    " where to put swap files.
 
