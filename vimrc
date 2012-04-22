@@ -27,6 +27,7 @@ Bundle 'kchmck/vim-coffee-script'
 Bundle 'tpope/vim-unimpaired'
 Bundle 'tpope/vim-endwise'
 Bundle 'mileszs/ack.vim'
+Bundle 'vim-scripts/ZoomWin'
 
 filetype plugin indent on
 
@@ -83,6 +84,8 @@ nmap <C-H> <C-W>h
 nmap <C-J> <C-W>j
 nmap <C-K> <C-W>k
 nmap <C-L> <C-W>l
+
+nmap <Leader>z :ZoomWin<CR>
 
 if has("autocmd")
   " Remember last location in file, but not for commit messages.
