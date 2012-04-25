@@ -109,6 +109,9 @@ imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
 nmap <Leader>u mQviwU`Q
 nmap <Leader>l mQviwu`Q
 
+" toggle case at insert mode
+imap <C-U> <Esc>mQviw~`Qa
+
 nmap <Leader>so :so %<CR>
 
 set t_Co=16
