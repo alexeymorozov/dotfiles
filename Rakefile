@@ -5,9 +5,9 @@ require 'rake'
 require 'erb'
 
 task :install do
-	update_submodules
-	set_terminal_colors
-	Rake::Task['symlink'].execute
+  update_submodules
+  set_terminal_colors
+  Rake::Task['symlink'].execute
 end
 
 desc "symlink the dot files into user's home directory"
@@ -59,14 +59,14 @@ def link_file(file)
 end
 
 def update_submodules
-	`git submodule update --init`
+  `git submodule update --init`
 end
 
 def set_terminal_colors
-	`git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git \
-		&& cd ~/.dotfiles/gnome-terminal-colors-solarized \
-		&& git reset --hard 494ab41bfcc01922a0e1c4d27e0b71d5300f8e46 \
-		&& ./set_light.sh \
-		&& cd .. \
-		&& rm -rf gnome-terminal-colors-solarized`
+  `git clone https://github.com/sigurdga/gnome-terminal-colors-solarized.git \
+    && cd ~/.dotfiles/gnome-terminal-colors-solarized \
+    && git reset --hard 494ab41bfcc01922a0e1c4d27e0b71d5300f8e46 \
+    && ./set_light.sh \
+    && cd .. \
+    && rm -rf gnome-terminal-colors-solarized`
 end
