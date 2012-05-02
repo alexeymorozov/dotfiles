@@ -2,3 +2,27 @@ snippet each
 	<% ${1}.each do |${2}| %>
 		${3}
 	<% end %>
+snippet rc
+	<% ${1} %>
+snippet end
+	<% end %>${1}
+snippet ct
+	<%= content_tag '${1:DIV}', ${2:content}${3:,options} %>
+snippet ff
+	<% form_for @${1:model} do |f| %>
+		${2}
+	<% end %>
+snippet ffe
+	<% error_messages_for :${1:model} %>
+
+	<% form_for @${2:model} do |f| %>
+		${3}
+	<% end %>
+snippet fields
+	<% fields_for :${1:model}, @$1 do |${2:f}| %>
+		${3}
+	<% end %>
+snippet ff
+	<%= form_for @${1:model} do |f| %>
+		${2}
+	<% end %>
