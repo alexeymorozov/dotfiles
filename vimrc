@@ -39,7 +39,7 @@ set ruler
 set nowrap
 set tabstop=2
 set shiftwidth=2
-set noexpandtab
+set expandtab
 
 set hlsearch    " highlight matches
 set incsearch   " incremental searching
