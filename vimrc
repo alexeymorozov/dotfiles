@@ -66,6 +66,10 @@ set colorcolumn=120
 
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab nolist wrap
 
+let g:snipMate = {}
+let g:snipMate.scope_aliases = {}
+let g:snipMate.scope_aliases['php'] = 'php,html'
+
 let NERDSpaceDelims=1
 
 let g:ctrlp_working_path_mode = 0
