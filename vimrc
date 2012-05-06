@@ -43,6 +43,7 @@ autocmd FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab nolist wrap
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php,html'
+let g:snipMate.scope_aliases['eruby'] = 'eruby-rails,html'
 
 let NERDSpaceDelims=1
 
