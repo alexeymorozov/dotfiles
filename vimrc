@@ -14,6 +14,7 @@ set nowrap
 set tabstop=2
 set shiftwidth=2
 set expandtab
+set textwidth=72
 
 set hlsearch    " highlight matches
 set incsearch   " incremental searching
