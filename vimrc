@@ -37,7 +37,7 @@ set hidden
 
 set noesckeys
 
-set colorcolumn=120
+set colorcolumn=80
 
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab nolist wrap
 
