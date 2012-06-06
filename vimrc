@@ -47,6 +47,8 @@ let g:snipMate.scope_aliases['php'] = 'php,html'
 let g:snipMate.scope_aliases['eruby'] = 'eruby-rails,html'
 
 let NERDSpaceDelims=1
+let NERDTreeQuitOnOpen=1
+
 
 let g:ctrlp_working_path_mode = 0
 
