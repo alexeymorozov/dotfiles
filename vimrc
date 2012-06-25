@@ -40,7 +40,9 @@ set noesckeys
 set colorcolumn=80
 
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab nolist wrap
-autocmd FileType php setlocal fo+=t
+
+au BufNewFile,BufRead * if &ft == '' | set ft=txt | endif
+autocmd FileType txt setlocal fo+=t
 
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
@@ -49,7 +51,6 @@ let g:snipMate.scope_aliases['eruby'] = 'eruby-rails,html'
 
 let NERDSpaceDelims=1
 let NERDTreeQuitOnOpen=1
-
 
 let g:ctrlp_working_path_mode = 0
 
