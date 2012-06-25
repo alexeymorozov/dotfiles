@@ -15,7 +15,6 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set textwidth=72
-set fo+=t
 
 set hlsearch    " highlight matches
 set incsearch   " incremental searching
@@ -41,6 +40,7 @@ set noesckeys
 set colorcolumn=80
 
 autocmd FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab nolist wrap
+autocmd FileType php setlocal fo+=t
 
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
