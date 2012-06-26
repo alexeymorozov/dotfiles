@@ -39,10 +39,11 @@ set noesckeys
 
 set colorcolumn=80
 
-autocmd FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab nolist wrap
+au BufNewFile *.php exe "normal! i<?"
+au FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab nolist wrap
 
 au BufNewFile,BufRead * if &ft == '' | set ft=txt | endif
-autocmd FileType txt setlocal fo+=t
+au FileType txt setlocal fo+=t
 
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
@@ -57,8 +58,6 @@ let g:ctrlp_working_path_mode = 0
 let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 imap <C-F> <Plug>delimitMateS-Tab
-
-au BufNewFile *.php exe "normal! i<?"
 
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
