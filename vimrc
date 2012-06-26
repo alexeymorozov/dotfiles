@@ -62,7 +62,10 @@ au BufNewFile *.php exe "normal! i<?"
 
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
-nmap <Leader>ga :Gcommit -av<CR>
+nmap <Leader>ga :Gcommit -av<CR><C-W>_
+nmap <Leader>gb :Gblame<CR>
+nmap <Leader>gl :Glog<CR>
+nmap <Leader>gr :Gread<CR>
 
 nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>v :NERDTreeFind<CR>
