@@ -58,6 +58,8 @@ let delimitMate_expand_cr = 1
 let delimitMate_expand_space = 1
 imap <C-F> <Plug>delimitMateS-Tab
 
+au BufNewFile *.php exe "normal! i<?"
+
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>ga :Gcommit -av<CR>
