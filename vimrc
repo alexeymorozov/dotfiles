@@ -91,6 +91,9 @@ endif
 " insert relational path
 cmap %% <C-R>=expand('%:h').'/'<CR>
 
+" Create the directory containing the file in the buffer
+nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
+
 " Toggle paste mode
 nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
 imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
