@@ -47,6 +47,8 @@ au FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab nolist wrap
 au BufNewFile,BufRead * if &ft == '' | set ft=txt | endif
 au FileType txt setlocal fo+=t
 
+au FileType xml setlocal tabstop=2 shiftwidth=2 noexpandtab nolist wrap
+
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php,html'
