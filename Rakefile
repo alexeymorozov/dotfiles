@@ -1,5 +1,4 @@
-# Author: Ryan Bates
-# Edited by: Rekky
+Copyright (c) 2012 Aleksey Morozov, Ryan Bates
 
 require 'rake'
 require 'erb'
