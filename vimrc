@@ -41,6 +41,8 @@ set noesckeys
 
 set colorcolumn=80
 
+set cmdheight=2
+
 au BufNewFile *.php exe "normal! i<?"
 au FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab nolist wrap
 
