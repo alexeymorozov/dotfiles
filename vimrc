@@ -81,6 +81,9 @@ nmap <C-L> <C-W>l
 
 nmap <Leader>z :ZoomWin<CR>
 
+" Omni completion
+imap <C-B> <C-X><C-O>
+
 if has("autocmd")
   " Remember last location in file, but not for commit messages.
   " see :help last-position-jump
