@@ -12,4 +12,8 @@ set guioptions-=l
 set guioptions-=L
 set guioptions-=b
 
-set gfn=Monaco:h14
+if has('mac')
+  set gfn=Monaco:h14
+elseif has('unix')
+  set gfn=Ubuntu\ Mono\ 14
+endif
