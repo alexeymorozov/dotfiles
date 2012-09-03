@@ -1,0 +1,9 @@
+! Change Menu key to Control
+keycode 135 = Control_R
+add Control = Control_R
+
+! Swap Caps lock and Escape
+remove Lock = Caps_Lock
+keysym Escape = Caps_Lock
+keysym Caps_Lock = Escape
+add Lock = Caps_Lock
