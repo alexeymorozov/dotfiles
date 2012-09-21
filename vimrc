@@ -109,6 +109,9 @@ nmap <Leader>l mQviwu`Q
 " toggle case at insert mode
 imap <C-U> <Esc>mQviw~`Qa
 
+" clear file
+nmap ,clr :e!<CR>ggdG:w<CR>
+
 nmap <Leader>so :so $MYVIMRC<CR>
 
 set t_Co=16
