@@ -16,27 +16,30 @@ set shiftwidth=2
 set expandtab
 set textwidth=72
 
-set hlsearch    " highlight matches
-set incsearch   " incremental searching
-set ignorecase  " searches are case insensitive...
-set smartcase   " ... unless they contain at least one capital letter
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
 
 " disable beeping
 set noeb vb t_vb=
 
-" Press Space to turn off highlighting and clear any message already displayed.
+" press space to turn off highlighting and clear any message already displayed
 nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
 
 set wildignore+=.git,.realsync,.idea
 set wildignore+=*.png
 
-" Ignore bundler and sass cache
+" ignore bundler and sass cache
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 
 set wildmode=list:longest,full
 
-set backupdir=/tmp//    " where to put backup files.
-set directory=/tmp//    " where to put swap files.
+" where to put backup files
+set backupdir=/tmp//
+
+" where to put swap files
+set directory=/tmp//
 
 set hidden
 
@@ -77,7 +80,7 @@ nmap <Leader>v :NERDTreeFind<CR>
 
 nmap <F5> :GundoToggle<CR>
 
-" Switching between windows
+" switching between windows
 nmap <C-H> <C-W>h
 nmap <C-J> <C-W>j
 nmap <C-K> <C-W>k
@@ -85,11 +88,11 @@ nmap <C-L> <C-W>l
 
 nmap <Leader>z :ZoomWin<CR>
 
-" Omni completion
+" omni completion
 imap <C-B> <C-X><C-O>
 
 if has("autocmd")
-  " Remember last location in file, but not for commit messages.
+  " remember last location in file, but not for commit messages
   " see :help last-position-jump
   au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
     \| exe "normal! g`\"" | endif
@@ -98,14 +101,14 @@ endif
 " insert relational path
 cmap %% <C-R>=expand('%:h').'/'<CR>
 
-" Create the directory containing the file in the buffer
+" create the directory containing the file in the buffer
 nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
 
-" Toggle paste mode
+" toggle paste mode
 nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
 imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
 
-" upper/lower word
+" toggle case at normal mode
 nmap <Leader>u mQviwU`Q
 nmap <Leader>l mQviwu`Q
 
