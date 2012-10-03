@@ -73,3 +73,6 @@
 [submodule "vim/bundle/AutoComplPop"]
 	path = vim/bundle/AutoComplPop
 	url = https://github.com/vim-scripts/AutoComplPop.git
+[submodule "vim/bundle/vim-abolish"]
+	path = vim/bundle/vim-abolish
+	url = https://github.com/tpope/vim-abolish.git
