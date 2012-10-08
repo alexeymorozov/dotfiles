@@ -24,9 +24,6 @@ set smartcase
 " disable beeping
 set noeb vb t_vb=
 
-" press space to turn off highlighting and clear any message already displayed
-nnoremap <silent> <Space> :nohlsearch<Bar>:echo<CR>
-
 set wildignore+=.git,.realsync,.idea
 set wildignore+=*.png
 
@@ -67,6 +64,11 @@ let NERDSpaceDelims=1
 let NERDTreeQuitOnOpen=1
 
 let g:ctrlp_working_path_mode = 0
+
+" turn off highlighting and clear any message already displayed
+nnoremap <silent> <CR> :nohlsearch<Bar>:echo<CR>
+
+nnoremap <Space> :
 
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
