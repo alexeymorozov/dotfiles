@@ -46,14 +46,17 @@ set colorcolumn=80
 
 set cmdheight=2
 
-au BufNewFile *.php exe "normal! i<?"
-au FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab nolist wrap
+au BufNewFile *.php exe "normal! i<?php"
+
+" highlight eruby tags at twig templates
+au BufNewFile,BufRead *.html.twig set ft=eruby
+
+au FileType php,html,xml,css,javascript setlocal ts=4 sw=4 noet nolist wrap
+
+au FileType apache setlocal ts=4 sw=4 et nolist wrap
 
 au BufNewFile,BufRead * if &ft == '' | set ft=txt | endif
 au FileType txt setlocal fo+=t
-
-au FileType xml setlocal tabstop=2 shiftwidth=2 noexpandtab nolist wrap
-au FileType apache setlocal tabstop=4 shiftwidth=4 expandtab nolist wrap
 
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
