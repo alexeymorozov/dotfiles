@@ -75,7 +75,7 @@ nnoremap <Space> :
 
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
-nmap <Leader>ga :Gcommit -av<CR><C-W>_
+nmap <Leader>ga :Gcommit -av<CR><C-w>_
 nmap <Leader>gb :Gblame<CR>
 nmap <Leader>gl :Glog<CR>
 nmap <Leader>gr :Gread<CR>
@@ -86,15 +86,15 @@ nmap <Leader>v :NERDTreeFind<CR>
 nmap <F5> :GundoToggle<CR>
 
 " switching between windows
-nmap <C-H> <C-W>h
-nmap <C-J> <C-W>j
-nmap <C-K> <C-W>k
-nmap <C-L> <C-W>l
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 
 nmap <Leader>z :ZoomWin<CR>
 
 " omni completion
-imap <C-B> <C-X><C-O>
+imap <C-b> <C-x><C-o>
 
 if has("autocmd")
   " remember last location in file, but not for commit messages
@@ -104,7 +104,7 @@ if has("autocmd")
 endif
 
 " insert relational path
-cmap %% <C-R>=expand('%:h').'/'<CR>
+cmap %% <C-r>=expand('%:h').'/'<CR>
 
 " create the directory containing the file in the buffer
 nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
@@ -118,7 +118,7 @@ nmap <Leader>u mQviwU`Q
 nmap <Leader>l mQviwu`Q
 
 " toggle case at insert mode
-imap <C-U> <Esc>mQviw~`Qa
+imap <C-u> <Esc>mQviw~`Qa
 
 " clear file
 nmap ,clr :e!<CR>ggdG:w<CR>
