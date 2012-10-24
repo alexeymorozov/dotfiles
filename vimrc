@@ -60,7 +60,7 @@ au FileType txt setlocal fo+=t
 
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['php'] = 'php,html'
+let g:snipMate.scope_aliases['php'] = 'php'
 let g:snipMate.scope_aliases['eruby'] = 'eruby-rails,html'
 
 let NERDSpaceDelims=1
