@@ -134,6 +134,12 @@ nmap <Leader>jj /<C-r>=phpvar<CR><CR>:s//<%= \2 %>/<CR>
 nmap <Leader>jk /<C-r>=phpblock<CR><CR>:s//<% \1 %>/<CR>
 nmap <Leader>do :s/->/\./g<CR>
 
+inoremap ;<CR> <End>;<CR>
+inoremap ;<Esc> <End>;<Esc>
+inoremap ;j <End>;<Down>
+
+inoremap <D-j> <C-o>o
+
 set t_Co=16
 set background=light
 colorscheme solarized
