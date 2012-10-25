@@ -126,12 +126,12 @@ nmap ,clr :e!<CR>ggdG:w<CR>
 nmap <Leader>so :so $MYVIMRC<CR>
 
 let phpvar = '<?=\s*\(CHtml::encode(\)*$*\(\_.\{-}\)\(()\)\{0,1})\{0,1};*\s*?>'
-let phpblock = '<?\s*\(\_.\{-}\)\(:\|;\)*\s*?>'
+let phpblock = '<?\(php\)*\s*\(\_.\{-}\)\(:\|;\)*\s*?>'
 
 nmap <Leader>ph :%s/$PHRASES\[/t[/g<CR>
 nmap <Leader>ur :%s/Url::make(/path(/g<CR>
 nmap <Leader>jj /<C-r>=phpvar<CR><CR>:s//<%= \2 %>/<CR>
-nmap <Leader>jk /<C-r>=phpblock<CR><CR>:s//<% \1 %>/<CR>
+nmap <Leader>jk /<C-r>=phpblock<CR><CR>:s//<% \2 %>/<CR>
 nmap <Leader>do :s/->/\./g<CR>
 
 inoremap ;<CR> <End>;<CR>
