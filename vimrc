@@ -49,7 +49,7 @@ set cmdheight=2
 au BufNewFile *.php exe "normal! i<?php"
 
 " highlight eruby tags at twig templates
-au BufNewFile,BufRead *.html.twig set ft=eruby
+au BufNewFile,BufRead *.html.twig set ft=eruby.html
 
 au FileType php,html,xml,css,javascript,eruby setlocal ts=4 sw=4 noet nolist wrap
 
