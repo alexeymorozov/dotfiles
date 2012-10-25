@@ -14,7 +14,7 @@ DISABLE_LS_COLORS="true"
 
 plugins=(git bundler brew gem)
 
-export PATH="/usr/local/bin:$PATH"
+export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
 
 source $ZSH/oh-my-zsh.sh
 
