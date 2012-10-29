@@ -1,3 +1,14 @@
+ZSH=$HOME/.oh-my-zsh
+ZSH_THEME="dst"
+DISABLE_AUTO_UPDATE="true"
+DISABLE_LS_COLORS="true"
+
+plugins=(git bundler brew gem)
+
+source $ZSH/oh-my-zsh.sh
+
+export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
+
 case `uname` in
   Darwin)
     export VISUAL="mvim -f"
@@ -7,17 +18,8 @@ case `uname` in
     ;;
 esac
 
-ZSH=$HOME/.oh-my-zsh
-ZSH_THEME="dst"
-DISABLE_AUTO_UPDATE="true"
-DISABLE_LS_COLORS="true"
-
-plugins=(git bundler brew gem)
-
-export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
-
-source $ZSH/oh-my-zsh.sh
-
+# for Homebrew installed rbenv
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
 
 alias ss=short_svn_status
 alias sd=color_svn_diff
@@ -48,7 +50,3 @@ remove_distraction() {
 color_svn_diff() {
   svn diff | less -R
 }
-
-
-# for Homebrew installed rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
