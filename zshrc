@@ -3,7 +3,7 @@ ZSH_THEME="dst"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
 
-plugins=(git bundler brew gem)
+plugins=(git bundler brew gem composer svn)
 
 source $ZSH/oh-my-zsh.sh
 
