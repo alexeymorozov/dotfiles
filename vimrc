@@ -15,6 +15,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set textwidth=78
+set formatoptions=tcrqwan
 
 set hlsearch
 set incsearch
@@ -55,9 +56,6 @@ au BufNewFile,BufRead *.html.twig set ft=eruby.html
 au FileType php,html,xml,css,javascript,eruby.html setlocal ts=4 sw=4 noet nolist wrap
 
 au FileType apache setlocal ts=4 sw=4 et nolist wrap
-
-au BufNewFile,BufRead * if &ft == '' | set ft=txt | endif
-au FileType txt setlocal fo+=t
 
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
