@@ -48,6 +48,8 @@ set colorcolumn=80
 
 set cmdheight=2
 
+au FileType * setlocal formatoptions-=o
+
 au BufNewFile *.php exe "normal! i<?php"
 
 " highlight eruby tags at twig templates
