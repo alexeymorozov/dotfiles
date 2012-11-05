@@ -32,11 +32,12 @@ set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 
 set wildmode=list:longest,full
 
-" where to put backup files
-set backupdir=/tmp//
+set autowriteall
+au FocusLost * :wa
 
-" where to put swap files
-set directory=/tmp//
+set noswapfile
+set nobackup
+set nowritebackup
 
 set hidden
 
