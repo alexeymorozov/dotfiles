@@ -50,7 +50,7 @@ set cmdheight=2
 
 au FileType * setlocal formatoptions-=o
 
-au BufNewFile *.php exe "normal! i<?php"
+au BufNewFile *.php exe "normal! i<?php\r\r"
 
 " highlight eruby tags at twig templates
 au BufNewFile,BufRead *.html.twig set ft=eruby.html
