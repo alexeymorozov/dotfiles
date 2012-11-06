@@ -116,6 +116,8 @@ nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
 nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
 imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
 
+nmap <F12> :syntax sync fromstart<CR>
+
 " toggle case at normal mode
 nmap <Leader>u mQviwU`Q
 nmap <Leader>l mQviwu`Q
