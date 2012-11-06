@@ -64,6 +64,8 @@ let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php'
 let g:snipMate.scope_aliases['eruby'] = 'eruby-rails,html'
 
+let g:buffergator_autoexpand_on_split = 0
+
 let NERDSpaceDelims=1
 let NERDTreeQuitOnOpen=1
 
