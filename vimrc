@@ -50,6 +50,9 @@ set cmdheight=2
 
 au FileType * setlocal formatoptions-=o
 
+" disable auto line joining at svn commit
+au FileType svn setlocal formatoptions-=a
+
 au BufNewFile *.php exe "normal! i<?php\r\r"
 
 " highlight eruby tags at twig templates
