@@ -15,7 +15,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 set textwidth=78
-set formatoptions=tcrqwan
+set formatoptions=tcrqwn
 
 set hlsearch
 set incsearch
@@ -47,11 +47,6 @@ set noesckeys
 set colorcolumn=80
 
 set cmdheight=2
-
-au FileType * setlocal formatoptions-=o
-
-" disable auto line joining at svn commit
-au FileType svn setlocal formatoptions-=a
 
 au BufNewFile *.php exe "normal! i<?php\r\r"
 
