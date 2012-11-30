@@ -57,6 +57,8 @@ au FileType php,yaml,html,xml,css,javascript,eruby.html setlocal ts=4 sw=4 et no
 
 au FileType apache setlocal ts=4 sw=4 et nolist wrap
 
+au FileType text setlocal fo-=r
+
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php'
