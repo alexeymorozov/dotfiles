@@ -31,6 +31,9 @@ set wildignore+=*.png
 " ignore bundler and sass cache
 set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 
+" ignore composer and symfony cache
+set wildignore+=*/vendor/*,*/app/cache/*
+
 set wildmode=list:longest,full
 
 set autowriteall
@@ -51,13 +54,12 @@ set cmdheight=2
 au BufNewFile *.php exe "normal! i<?php\r\r"
 
 " highlight eruby tags at twig templates
-au BufNewFile,BufRead *.html.twig set ft=eruby.html
+au BufNewFile,BufRead *.html.twig set ft=htmljinja.html
 
-au FileType php,yaml,html,xml,css,javascript,eruby.html setlocal ts=4 sw=4 et nolist wrap
-
+au FileType php,yaml,html,xml,css,javascript,eruby.html,htmljinja.html setlocal ts=4 sw=4 et nolist wrap
 au FileType apache setlocal ts=4 sw=4 et nolist wrap
-
 au FileType text setlocal fo-=r
+au FileType snippets setlocal fo-=c
 
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
@@ -136,7 +138,7 @@ let phpblock = '<?\(php\)*\s*\(\_.\{-}\)\(:\|;\)*\s*?>'
 
 nmap <Leader>ph :%s/$PHRASES\[/t[/g<CR>
 nmap <Leader>ur :%s/Url::make(/path(/g<CR>
-nmap <Leader>jj /<C-r>=phpvar<CR><CR>:s//<%= \2 %>/<CR>
+nmap <Leader>jj /<C-r>=phpvar<CR><CR>:s//{{ \2 }}/<CR>
 nmap <Leader>jk /<C-r>=phpblock<CR><CR>:s//<% \2 %>/<CR>
 nmap <Leader>do :s/->/\./g<CR>
 
@@ -145,6 +147,10 @@ inoremap ;<Esc> <End>;<Esc>
 inoremap ;j <End>;<Down>
 
 inoremap <D-j> <C-o>o
+
+function! Namespace()
+  return substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\', 'g')
+endfunction
 
 set t_Co=16
 set background=light
