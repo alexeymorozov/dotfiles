@@ -60,6 +60,7 @@ au FileType php,yaml,html,xml,css,javascript,eruby.html,htmljinja.html setlocal 
 au FileType apache setlocal ts=4 sw=4 et nolist wrap
 au FileType text setlocal fo-=r
 au FileType snippets setlocal fo-=c
+au FileType gitconfig setl noet ts=4
 
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
