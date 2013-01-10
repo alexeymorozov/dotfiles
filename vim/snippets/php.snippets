@@ -94,8 +94,10 @@ snippet vd
 	var_dump(${1});
 snippet vdd
 	var_dump(${1}); die(${2:});
+snippet .
+	->${1}
 snippet t
-	$this->
+	$this->${1}
 snippet ret
 	return ${1};
 snippet rett
@@ -214,3 +216,17 @@ snippet ecol
 	 * @ORM\Column(type="${1:string}"${2})
 	 */
 	private $${3:col};${4}
+snippet unit
+	namespace `Namespace()`;
+
+	use `substitute(Namespace(), '\vTests?\\', '', 'g') . '\' . substitute(Filename(), 'Test$', '', '')`;
+
+	class `Filename()` extends \PHPUnit_Framework_TestCase
+	{
+		${1}
+	}
+snippet test
+	public function test${1}()
+	{
+		${2}
+	}
