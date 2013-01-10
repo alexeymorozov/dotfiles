@@ -67,13 +67,18 @@ let g:snipMate.scope_aliases['eruby'] = 'eruby-rails,html'
 let g:buffergator_autoexpand_on_split = 0
 
 let NERDSpaceDelims=1
+
 let NERDTreeQuitOnOpen=1
+let NERDTreeShowHidden=1
 
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_files = 100000
 
 " turn off highlighting and clear any message already displayed
 nnoremap <silent> <CR> :nohlsearch<Bar>:echo<CR>
+
+" yank from the cursor to the end of the line, to be consistent with C and D
+nnoremap Y y$
 
 nnoremap <Space> :
 
