@@ -74,6 +74,8 @@ let NERDTreeQuitOnOpen=1
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_files = 100000
 
+let g:acp_behaviorSnipmateLength = 1
+
 " turn off highlighting and clear any message already displayed
 nnoremap <silent> <CR> :nohlsearch<Bar>:echo<CR>
 
