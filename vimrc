@@ -4,16 +4,20 @@ call pathogen#infect()
 set nocompatible
 syntax on
 filetype plugin indent on
+set hidden
 
 let mapleader = ","
+set noesckeys
 
 set number
 set ruler
+set colorcolumn=80
+set cmdheight=2
 
-set nowrap
+set expandtab
 set tabstop=2
 set shiftwidth=2
-set expandtab
+set nowrap
 set textwidth=78
 set formatoptions=tcrqwn
 
@@ -25,17 +29,6 @@ set smartcase
 " disable beeping
 set noeb vb t_vb=
 
-set wildignore+=.git,.realsync,.idea
-set wildignore+=*.png
-
-" ignore bundler and sass cache
-set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
-
-" ignore composer and symfony cache
-set wildignore+=*/vendor/*,*/app/cache/*
-
-set wildmode=list:longest,full
-
 set autowriteall
 au FocusLost * :wa
 
@@ -43,26 +36,35 @@ set noswapfile
 set nobackup
 set nowritebackup
 
-set hidden
+set wildmode=list:longest,full
 
-set noesckeys
+set wildignore+=.git,.realsync,.idea
+set wildignore+=*.png,*.jpg,*.gif
 
-set colorcolumn=80
+" ignore bundler and sass cache
+set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 
-set cmdheight=2
+" ignore composer and symfony cache
+set wildignore+=*/vendor/*,*/app/cache/*
+
+" remember last location in file, but not for commit messages
+" see :help last-position-jump
+au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
+  \| exe "normal! g`\"" | endif
 
 au BufNewFile *.php exe "normal! i<?php\r\r"
 
-au FileType php,yaml,html,xml,css,javascript setlocal ts=4 sw=4 et nolist wrap
-au FileType apache setlocal ts=4 sw=4 et nolist wrap
-au FileType text setlocal fo-=r
-au FileType snippets setlocal fo-=c
-au FileType gitconfig setl noet ts=4
+au FileType php,yaml,html,xml,css,javascript,apache setl et ts=4 sw=4 wrap
+au FileType text setl fo-=r
+au FileType snippets setl fo-=c
+au FileType gitconfig setl noet ts=4 sw=4
 
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
 let g:snipMate.scope_aliases['php'] = 'php'
 let g:snipMate.scope_aliases['eruby'] = 'eruby-rails,html'
+
+let g:acp_behaviorSnipmateLength = 1
 
 let g:buffergator_autoexpand_on_split = 0
 
@@ -72,12 +74,16 @@ let NERDTreeQuitOnOpen=1
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_files = 100000
 
-let g:acp_behaviorSnipmateLength = 1
-
 " turn off highlighting and clear any message already displayed
 nnoremap <silent> <CR> :nohlsearch<Bar>:echo<CR>
 
 nnoremap <Space> :
+
+" jump after parentheses
+inoremap ;<CR> <End>;<CR>
+inoremap ;<Esc> <End>;<Esc>
+inoremap ;j <End>;<Down>
+inoremap <D-j> <C-o>o
 
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
@@ -101,13 +107,6 @@ nmap <Leader>z :ZoomWin<CR>
 
 " omni completion
 imap <C-b> <C-x><C-o>
-
-if has("autocmd")
-  " remember last location in file, but not for commit messages
-  " see :help last-position-jump
-  au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
-    \| exe "normal! g`\"" | endif
-endif
 
 " insert relational path
 cmap %% <C-r>=expand('%:h').'/'<CR>
@@ -133,20 +132,14 @@ nmap ,clr :e!<CR>ggdG:w<CR>
 
 nmap <Leader>so :so $MYVIMRC<CR>
 
+" translate templates
 let phpvar = '<?=\s*\(CHtml::encode(\)*$*\(\_.\{-}\)\(()\)\{0,1})\{0,1};*\s*?>'
 let phpblock = '<?\(php\)*\s*\(\_.\{-}\)\(:\|;\)*\s*?>'
-
 nmap <Leader>ph :%s/$PHRASES\[/t[/g<CR>
 nmap <Leader>ur :%s/Url::make(/path(/g<CR>
 nmap <Leader>jj /<C-r>=phpvar<CR><CR>:s//{{ \2 }}/<CR>
 nmap <Leader>jk /<C-r>=phpblock<CR><CR>:s//<% \2 %>/<CR>
 nmap <Leader>do :s/->/\./g<CR>
-
-inoremap ;<CR> <End>;<CR>
-inoremap ;<Esc> <End>;<Esc>
-inoremap ;j <End>;<Down>
-
-inoremap <D-j> <C-o>o
 
 function! Namespace()
   return substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\', 'g')
