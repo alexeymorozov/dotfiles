@@ -1,11 +1,5 @@
-snippet php
-	<?php ${1}; ?>
-snippet pec
-	<?= ${1}; ?>
 snippet ec
 	echo "${1:string}"${2};
-snippet ethis
-	<?php echo $this->${1:something}; ?>
 snippet inc
 	include '${1:file}';${2}
 snippet inc1
@@ -18,18 +12,10 @@ snippet gl
 	$GLOBALS['${1:variable}']${2: = }${3:something}${4:;}${5}
 snippet G
 	$GLOBALS['${1:variable}']
-snippet $_ COOKIE['...']
-	$_COOKIE['${1:variable}']${2}
-snippet $_ ENV['...']
-	$_ENV['${1:variable}']${2}
-snippet $_ FILES['...']
-	$_FILES['${1:variable}']${2}
-snippet $_ Get['...']
+snippet $_ GET['...']
 	$_GET['${1:variable}']${2}
 snippet $_ POST['...']
 	$_POST['${1:variable}']${2}
-snippet $_ REQUEST['...']
-	$_REQUEST['${1:variable}']${2}
 snippet $_ SERVER['...']
 	$_SERVER['${1:variable}']${2}
 snippet $_ SESSION['...']
@@ -60,17 +46,6 @@ snippet els
 snippet eif
 	elseif (${1})
 		${2}
-snippet ifil
-	<?php if (${1:/* condition */}): ?>
-		${2:<!-- code... -->}
-	<?php endif; ?>
-snippet ifeil
-	<?php if (${1:/* condition */}): ?>
-		${2:<!-- html... -->}
-	<?php else: ?>
-		${3:<!-- html... -->}
-	<?php endif; ?>
-	${4}
 snippet t
 	$${1:retVal} = ${2:condition} ? ${3:a} : ${4:b};${5}
 snippet switch
@@ -90,25 +65,13 @@ snippet case
 		break;${3}
 snippet for
 	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++})
-	{
 		${4: // code...}
-	}
 snippet fea
 	foreach ($${1} as $${2})
 		${3}
-snippet foreachil
-	<?php foreach ($${1:variable} as $${2:value}): ?>
-		${3:<!-- html... -->}
-	<?php endforeach; ?>
 snippet foreachk
 	foreach ($${1:variable} as $${2:key} => $${3:value})
-	{
-		${4:// code...}
-	}
-snippet foreachkil
-	<?php foreach ($${1:variable} as $${2:key} => $${3:value}): ?>
-		${4:<!-- html... -->}
-	<?php endforeach; ?>
+		${4}
 snippet arr
 	$${1} = array(${2});
 snippet ar
@@ -120,16 +83,13 @@ snippet try
 	}
 	catch (${1:Exception} $e)
 	{
+		${3}
 	}
 snippet lambda
 	${1:static }function (${2:args}) use (${3:&$x, $y /*put vars in scope (closure) */})
 	{
 		${4}
 	};
-snippet pd
-	echo '<pre>'; var_dump(${1}); echo '</pre>';
-snippet pdd
-	echo '<pre>'; var_dump(${1}); echo '</pre>'; die(${2:});
 snippet vd
 	var_dump(${1});
 snippet vdd
@@ -238,9 +198,6 @@ snippet eid
 	 */
 	private $id;
 
-	/**
-	 * @return integer
-	 */
 	public function getId()
 	{
 		return $this->id;
