@@ -53,10 +53,7 @@ set cmdheight=2
 
 au BufNewFile *.php exe "normal! i<?php\r\r"
 
-" highlight eruby tags at twig templates
-au BufNewFile,BufRead *.html.twig set ft=htmljinja.html
-
-au FileType php,yaml,html,xml,css,javascript,eruby.html,htmljinja.html setlocal ts=4 sw=4 et nolist wrap
+au FileType php,yaml,html,xml,css,javascript setlocal ts=4 sw=4 et nolist wrap
 au FileType apache setlocal ts=4 sw=4 et nolist wrap
 au FileType text setlocal fo-=r
 au FileType snippets setlocal fo-=c

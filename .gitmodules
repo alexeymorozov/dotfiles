@@ -76,3 +76,6 @@
 [submodule "vim/bundle/PIV"]
 	path = vim/bundle/PIV
 	url = git@github.com:rekky/PIV.git
+[submodule "vim/bundle/vim-twig"]
+	path = vim/bundle/vim-twig
+	url = https://github.com/beyondwords/vim-twig.git
