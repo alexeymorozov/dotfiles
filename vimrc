@@ -81,7 +81,8 @@ nnoremap <Space> :
 inoremap ;<CR> <End>;<CR>
 inoremap ;<Esc> <End>;<Esc>
 inoremap ;j <End>;<Down>
-inoremap <S-Enter> <C-o>o
+inoremap ,j <End>,<Down>
+inoremap jj <C-o>o
 
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
