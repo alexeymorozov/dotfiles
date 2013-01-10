@@ -46,7 +46,7 @@ snippet els
 snippet eif
 	elseif (${1})
 		${2}
-snippet t
+snippet ?
 	$${1:retVal} = ${2:condition} ? ${3:a} : ${4:b};${5}
 snippet switch
 	switch ($${1:variable})
@@ -94,6 +94,8 @@ snippet vd
 	var_dump(${1});
 snippet vdd
 	var_dump(${1}); die(${2:});
+snippet t
+	$this->
 snippet ret
 	return ${1};
 snippet rett
@@ -156,6 +158,11 @@ snippet cl
 	class `Filename()`
 	{
 		${1}
+	}
+snippet con
+	public function __construct(${1})
+	{
+		${2}
 	}
 snippet set
 	public function set${1:Property}($${2:property})
