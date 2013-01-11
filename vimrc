@@ -67,6 +67,8 @@ augroup vimrcEx
 
   au BufNewFile *.php exe "normal! i<?php\r\r"
 
+  au BufWritePost .vimrc source $MYVIMRC
+
 augroup END
 
 let g:snipMate = {}
@@ -143,8 +145,6 @@ imap <C-u> <Esc>mQviw~`Qa
 
 " clear file
 nmap <Leader>clr :e!<CR>ggdG:w<CR>
-
-nmap <Leader>so :so $MYVIMRC<CR>
 
 " translate templates
 let phpvar = '<?=\s*\(CHtml::encode(\)*$*\(\_.\{-}\)\(()\)\{0,1})\{0,1};*\s*?>'
