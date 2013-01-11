@@ -158,6 +158,8 @@ nmap <Leader>jj /<C-r>=phpvar<CR><CR>:s//{{ \2 }}/<CR>
 nmap <Leader>jk /<C-r>=phpblock<CR><CR>:s//<% \2 %>/<CR>
 nmap <Leader>do :s/->/\./g<CR>
 
+nmap <Leader>, :e $MYVIMRC<CR>
+
 function! Namespace()
   return substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\', 'g')
 endfunction
