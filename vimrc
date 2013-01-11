@@ -52,12 +52,22 @@ au FileType text setl fo-=r
 au FileType snippets setl fo-=c
 au FileType gitconfig setl noet ts=4 sw=4
 
-" remember last location in file, but not for commit messages
-" see :help last-position-jump
-au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
-  \| exe "normal! g`\"" | endif
+" put these in an autocmd group, so that we can delete them easily
+augroup vimrcEx
 
-au BufNewFile *.php exe "normal! i<?php\r\r"
+  " delete all commands in this group
+  au!
+
+  " remember last location in file, but not for commit messages
+  " see :help last-position-jump
+  au BufReadPost *
+    \ if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$") |
+    \   exe "normal! g`\"" |
+    \ endif
+
+  au BufNewFile *.php exe "normal! i<?php\r\r"
+
+augroup END
 
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
