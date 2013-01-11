@@ -24,6 +24,8 @@ set noeb vb t_vb=
 set autowriteall
 au FocusLost * :wa
 
+set autoread
+
 set noswapfile
 set nobackup
 set nowritebackup
