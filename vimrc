@@ -14,13 +14,6 @@ set ruler
 set colorcolumn=80
 set cmdheight=2
 
-set expandtab
-set tabstop=2
-set shiftwidth=2
-set nowrap
-set textwidth=78
-set formatoptions=tcrqwn
-
 set hlsearch
 set incsearch
 set ignorecase
@@ -47,17 +40,24 @@ set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 " ignore composer and symfony cache
 set wildignore+=*/vendor/*,*/app/cache/*
 
+set expandtab
+set tabstop=2
+set shiftwidth=2
+set nowrap
+set textwidth=78
+set formatoptions=tcrqwn
+
+au FileType php,yaml,html,xml,css,javascript,apache setl et ts=4 sw=4 wrap
+au FileType text setl fo-=r
+au FileType snippets setl fo-=c
+au FileType gitconfig setl noet ts=4 sw=4
+
 " remember last location in file, but not for commit messages
 " see :help last-position-jump
 au BufReadPost * if &filetype !~ '^git\c' && line("'\"") > 0 && line("'\"") <= line("$")
   \| exe "normal! g`\"" | endif
 
 au BufNewFile *.php exe "normal! i<?php\r\r"
-
-au FileType php,yaml,html,xml,css,javascript,apache setl et ts=4 sw=4 wrap
-au FileType text setl fo-=r
-au FileType snippets setl fo-=c
-au FileType gitconfig setl noet ts=4 sw=4
 
 let g:snipMate = {}
 let g:snipMate.scope_aliases = {}
@@ -72,7 +72,7 @@ let NERDTreeQuitOnOpen=1
 let NERDTreeShowHidden=1
 
 let g:ctrlp_working_path_mode = 0
-let g:ctrlp_max_files = 100000
+let g:ctrlp_max_files = 0
 
 " turn off highlighting and clear any message already displayed
 nnoremap <silent> <CR> :nohlsearch<Bar>:echo<CR>
@@ -116,7 +116,7 @@ imap <C-b> <C-x><C-o>
 cmap %% <C-r>=expand('%:h').'/'<CR>
 
 " create the directory containing the file in the buffer
-nmap <silent> <leader>md :!mkdir -p %:p:h<CR>
+nmap <silent> <Leader>md :!mkdir -p %:p:h<CR>
 
 " toggle paste mode
 nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
@@ -132,7 +132,7 @@ nmap <Leader>l mQviwu`Q
 imap <C-u> <Esc>mQviw~`Qa
 
 " clear file
-nmap ,clr :e!<CR>ggdG:w<CR>
+nmap <Leader>clr :e!<CR>ggdG:w<CR>
 
 nmap <Leader>so :so $MYVIMRC<CR>
 
