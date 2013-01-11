@@ -102,6 +102,8 @@ inoremap ;j <End>;<Down>
 inoremap ,j <End>,<Down>
 inoremap jj <C-o>o
 
+imap <C-l> <Space>=><Space>
+
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>ga :Gcommit -av<CR><C-w>_
