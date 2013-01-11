@@ -135,7 +135,7 @@ nmap <silent> <Leader>md :!mkdir -p %:p:h<CR>
 
 " toggle paste mode
 nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
-imap <silent> <F4> <ESC>:set invpaste<CR>:set paste?<CR>
+imap <silent> <F4> <Esc>:set invpaste<CR>:set paste?<CR>
 
 nmap <F12> :syntax sync fromstart<CR>
 
