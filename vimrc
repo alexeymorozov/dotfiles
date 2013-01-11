@@ -12,7 +12,6 @@ set noesckeys
 set number
 set ruler
 set colorcolumn=80
-set cmdheight=2
 
 set hlsearch
 set incsearch
