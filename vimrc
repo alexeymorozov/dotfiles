@@ -21,9 +21,6 @@ set smartcase
 " disable beeping
 set noeb vb t_vb=
 
-set autowriteall
-au FocusLost * :wa
-
 set autoread
 
 set noswapfile
@@ -68,6 +65,8 @@ augroup vimrcEx
 
   au BufNewFile *.php exe "normal! i<?php\r\r"
 
+  au FocusLost * silent! wa
+
   au BufWritePost .vimrc source $MYVIMRC
 
 augroup END
@@ -86,6 +85,8 @@ let NERDTreeShowHidden=1
 
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_files = 0
+
+nmap <Leader>s :wa<CR>
 
 " turn off highlighting and clear any message already displayed
 nnoremap <silent> <CR> :nohlsearch<Bar>:echo<CR>
