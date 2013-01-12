@@ -86,7 +86,49 @@ let NERDTreeShowHidden=1
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_files = 0
 
+nmap <Leader>gs :Gstatus<CR>
+nmap <Leader>gd :Gdiff<CR>
+nmap <Leader>ga :Gcommit -av<CR><C-w>_
+nmap <Leader>gb :Gblame<CR>
+nmap <Leader>gl :Glog<CR>
+nmap <Leader>gr :Gread<CR>
+
+nmap <Leader>n :NERDTreeToggle<CR>
+nmap <Leader>v :NERDTreeFind<CR>
+
+nmap <F5> :GundoToggle<CR>
+
+nmap <Leader>z :ZoomWin<CR>
+
+" toggle paste mode
+nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
+imap <silent> <F4> <Esc>:set invpaste<CR>:set paste?<CR>
+
+" highlight again (sometimes highlighting breaks)
+nmap <F12> :syntax sync fromstart<CR>
+
 nmap <Leader>s :wa<CR>
+
+" open an edit command with the path of the currently edited file filled in
+nmap <Leader>e :e <C-R>=expand('%:p:h') . '/' <CR>
+
+" insert relational path
+cmap %% <C-r>=expand('%:h').'/'<CR>
+
+" open vimrc
+nmap <Leader>, :e <C-r>=resolve($MYVIMRC)<CR><CR>
+
+" create the directory containing the file in the buffer
+nmap <silent> <Leader>md :!mkdir -p %:p:h<CR>
+
+" clear file
+nmap <Leader>clr :e!<CR>ggdG:w<CR>
+
+" switching between windows
+nmap <C-h> <C-w>h
+nmap <C-j> <C-w>j
+nmap <C-k> <C-w>k
+nmap <C-l> <C-w>l
 
 " turn off highlighting and clear any message already displayed
 nnoremap <silent> <CR> :nohlsearch<Bar>:echo<CR>
@@ -105,40 +147,8 @@ inoremap jj <C-o>o
 
 imap <C-l> <Space>=><Space>
 
-nmap <Leader>gs :Gstatus<CR>
-nmap <Leader>gd :Gdiff<CR>
-nmap <Leader>ga :Gcommit -av<CR><C-w>_
-nmap <Leader>gb :Gblame<CR>
-nmap <Leader>gl :Glog<CR>
-nmap <Leader>gr :Gread<CR>
-
-nmap <Leader>n :NERDTreeToggle<CR>
-nmap <Leader>v :NERDTreeFind<CR>
-
-nmap <F5> :GundoToggle<CR>
-
-" switching between windows
-nmap <C-h> <C-w>h
-nmap <C-j> <C-w>j
-nmap <C-k> <C-w>k
-nmap <C-l> <C-w>l
-
-nmap <Leader>z :ZoomWin<CR>
-
 " omni completion
 imap <C-b> <C-x><C-o>
-
-" insert relational path
-cmap %% <C-r>=expand('%:h').'/'<CR>
-
-" create the directory containing the file in the buffer
-nmap <silent> <Leader>md :!mkdir -p %:p:h<CR>
-
-" toggle paste mode
-nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
-imap <silent> <F4> <Esc>:set invpaste<CR>:set paste?<CR>
-
-nmap <F12> :syntax sync fromstart<CR>
 
 " toggle case at normal mode
 nmap <Leader>u mQviwU`Q
@@ -146,9 +156,6 @@ nmap <Leader>l mQviwu`Q
 
 " toggle case at insert mode
 imap <C-u> <Esc>mQviw~`Qa
-
-" clear file
-nmap <Leader>clr :e!<CR>ggdG:w<CR>
 
 " translate templates
 let phpvar = '<?=\s*\(CHtml::encode(\)*$*\(\_.\{-}\)\(()\)\{0,1})\{0,1};*\s*?>'
@@ -158,8 +165,6 @@ nmap <Leader>ur :%s/Url::make(/path(/g<CR>
 nmap <Leader>jj /<C-r>=phpvar<CR><CR>:s//{{ \2 }}/<CR>
 nmap <Leader>jk /<C-r>=phpblock<CR><CR>:s//<% \2 %>/<CR>
 nmap <Leader>do :s/->/\./g<CR>
-
-nmap <Leader>, :e <C-r>=resolve($MYVIMRC)<CR><CR>
 
 function! Namespace()
   return substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\', 'g')
