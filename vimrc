@@ -4,7 +4,6 @@ call pathogen#infect()
 set nocompatible
 syntax on
 filetype plugin indent on
-set hidden
 
 let mapleader = ","
 set noesckeys
@@ -21,6 +20,7 @@ set smartcase
 " disable beeping
 set noeb vb t_vb=
 
+set hidden
 set autoread
 
 set noswapfile
