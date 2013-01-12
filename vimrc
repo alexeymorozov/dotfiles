@@ -45,16 +45,16 @@ set nowrap
 set textwidth=78
 set formatoptions=tcrqwn
 
-au FileType php,yaml,html,xml,css,javascript,apache setl et ts=4 sw=4 wrap
-au FileType text setl fo-=r
-au FileType snippets setl fo-=c
-au FileType gitconfig setl noet ts=4 sw=4
-
 " put these in an autocmd group, so that we can delete them easily
-augroup vimrcEx
+augroup vimrc
 
   " delete all commands in this group
   au!
+
+  au FileType php,yaml,html,xml,css,javascript,apache setl et ts=4 sw=4 wrap
+  au FileType text setl fo-=r
+  au FileType snippets setl fo-=c
+  au FileType gitconfig setl noet ts=4 sw=4
 
   " remember last location in file, but not for commit messages
   " see :help last-position-jump
