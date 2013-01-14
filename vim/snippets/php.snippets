@@ -98,6 +98,8 @@ snippet .
 	->${1}
 snippet t
 	$this->${1}
+snippet te
+	$this->${1:property} = $$1;${2}
 snippet ret
 	return ${1};
 snippet rett
@@ -229,4 +231,20 @@ snippet test
 	public function test${1}()
 	{
 		${2}
+	}
+snippet fix
+	namespace `Namespace()`;
+
+	use Doctrine\Common\DataFixtures\FixtureInterface;
+	use Doctrine\Common\Persistence\ObjectManager;
+
+	class `Filename()` implements FixtureInterface
+	{
+		public function load(ObjectManager $manager)
+		{
+			$fixtures = ${1};
+
+			$manager->persist($fixtures);
+			$manager->flush();
+		}
 	}
