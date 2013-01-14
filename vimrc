@@ -100,6 +100,11 @@ nmap <F5> :GundoToggle<CR>
 
 nmap <Leader>z :ZoomWin<CR>
 
+" phpunit compilation
+com! -nargs=* Phpunit make -c app <q-args> | cw
+
+nmap <Leader>t :Phpunit %<CR>
+
 " toggle paste mode
 nmap <silent> <F4> :set invpaste<CR>:set paste?<CR>
 imap <silent> <F4> <Esc>:set invpaste<CR>:set paste?<CR>
