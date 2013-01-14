@@ -71,12 +71,8 @@ augroup vimrc
 
 augroup END
 
-let g:snipMate = {}
-let g:snipMate.scope_aliases = {}
-let g:snipMate.scope_aliases['php'] = 'php'
-let g:snipMate.scope_aliases['eruby'] = 'eruby-rails,html'
-
 let g:buffergator_autoexpand_on_split = 0
+let g:buffergator_suppress_keymaps = 1
 
 let NERDSpaceDelims=1
 
@@ -95,6 +91,9 @@ nmap <Leader>gr :Gread<CR>
 
 nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>v :NERDTreeFind<CR>
+
+nmap <Leader>b :BuffergatorOpen<CR>
+nmap <Leader>B :BuffergatorClose<CR>
 
 nmap <F5> :GundoToggle<CR>
 
@@ -115,7 +114,7 @@ nmap <F12> :syntax sync fromstart<CR>
 nmap <Leader>s :wa<CR>
 
 " open an edit command with the path of the currently edited file filled in
-nmap <Leader>e :e <C-R>=expand('%:p:h') . '/' <CR>
+nmap <Leader>e :e <C-R>=expand('%:h') . '/' <CR>
 
 " insert relational path
 cmap %% <C-r>=expand('%:h').'/'<CR>
