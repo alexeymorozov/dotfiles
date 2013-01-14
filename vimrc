@@ -174,6 +174,10 @@ function! Namespace()
   return substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\', 'g')
 endfunction
 
+if filereadable(expand("~/.vimrc.local"))
+  source ~/.vimrc.local
+endif
+
 set t_Co=16
 set background=light
 colorscheme solarized
