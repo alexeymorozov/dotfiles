@@ -38,6 +38,8 @@ set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
 " ignore composer and symfony cache
 set wildignore+=*/vendor/*,*/app/cache/*
 
+set smartindent
+
 set expandtab
 set tabstop=2
 set shiftwidth=2
