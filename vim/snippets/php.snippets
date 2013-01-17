@@ -248,3 +248,26 @@ snippet fix
 			$manager->flush();
 		}
 	}
+snippet com
+	namespace `Namespace()`;
+
+	use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
+	use Symfony\Component\Console\Input\InputInterface;
+	use Symfony\Component\Console\Output\OutputInterface;
+
+	/**
+	 * ${1}.
+	 */
+	class `Filename()` extends ContainerAwareCommand
+	{
+		protected function configure()
+		{
+			$this
+				->setName('${2}');
+		}
+
+		protected function execute(InputInterface $input, OutputInterface $output)
+		{
+			${3}
+		}
+	}
