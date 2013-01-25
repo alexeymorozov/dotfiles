@@ -82,3 +82,6 @@
 [submodule "vim/bundle/vim-phpunit"]
 	path = vim/bundle/vim-phpunit
 	url = https://github.com/docteurklein/vim-phpunit.git
+[submodule "vim/bundle/vim-json"]
+	path = vim/bundle/vim-json
+	url = https://github.com/leshill/vim-json
