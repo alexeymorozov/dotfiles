@@ -11,6 +11,8 @@ export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
 
 export PATH="$PATH":$HOME/chromium/depot_tools
 
+export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
+
 export COMPOSER_BIN_DIR="/usr/local/bin"
 
 export LC_ALL=en_US.UTF-8
