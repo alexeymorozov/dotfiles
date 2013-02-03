@@ -27,15 +27,13 @@ case `uname` in
     ;;
 esac
 
-export RBENV_ROOT="${HOME}/.rbenv"
-
-if [ -d "${RBENV_ROOT}" ]; then
-  export PATH="${RBENV_ROOT}/bin:${PATH}"
-  eval "$(rbenv init -)"
-fi
-
 # for Homebrew installed rbenv
-# if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+alias git=hub
+if type compdef >/dev/null; then
+   compdef hub=git
+fi
 
 alias ss=short_svn_status
 alias sd=color_svn_diff
