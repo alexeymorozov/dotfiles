@@ -136,9 +136,6 @@ nmap <C-j> <C-w>j
 nmap <C-k> <C-w>k
 nmap <C-l> <C-w>l
 
-" turn off highlighting and clear any message already displayed
-nnoremap <silent> <CR> :nohlsearch<Bar>:echo<CR>
-
 " yank from the cursor to the end of the line, to be consistent with C and D
 nnoremap Y y$
 
