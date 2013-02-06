@@ -13,19 +13,35 @@ if which brew > /dev/null 2>&1; then
   export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
 fi
 
+if [ -d "$HOME/local/bin" ] ; then
+    PATH="$HOME/local/bin:$PATH"
+    export LD_LIBRARY_PATH="${HOME}/local/lib"
+    export LDFLAGS=-L${HOME}/local/lib
+    export CPPFLAGS=-I${HOME}/local/include
+fi
+
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
 case `uname` in
   Darwin)
-    export VISUAL="mvim -f"
+    EDITOR="mvim -f"
     ;;
   Linux)
-    export VISUAL="gvim -f"
+    if which gvim > /dev/null; then
+      EDITOR="gvim -f"
+    else
+      EDITOR="vi -f"
+    fi
     ;;
 esac
+export VISUAL=$EDITOR
 
-# for Homebrew installed rbenv
+export RBENV_ROOT="${HOME}/.rbenv"
+if [ -d "${RBENV_ROOT}"  ]; then
+  export PATH="${RBENV_ROOT}/bin:${PATH}"
+fi
+
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 alias git=hub
