@@ -9,7 +9,9 @@ source $ZSH/oh-my-zsh.sh
 
 export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
 export PATH="$PATH":$HOME/chromium/depot_tools
-export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
+if which brew > /dev/null 2>&1; then
+  export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
+fi
 
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
@@ -24,7 +26,7 @@ case `uname` in
 esac
 
 # for Homebrew installed rbenv
-if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 alias git=hub
 if type compdef >/dev/null; then
