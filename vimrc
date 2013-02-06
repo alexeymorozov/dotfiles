@@ -91,6 +91,8 @@ nmap <Leader>gb :Gblame<CR>
 nmap <Leader>gl :Glog<CR>
 nmap <Leader>gr :Gread<CR>
 
+vmap gl :<C-U>!svn blame <C-R>=expand("%:p") <CR> \| sed -n <C-R>=line("'<") <CR>,<C-R>=line("'>") <CR>p <CR>
+
 nmap <Leader>n :NERDTreeToggle<CR>
 nmap <Leader>v :NERDTreeFind<CR>
 
