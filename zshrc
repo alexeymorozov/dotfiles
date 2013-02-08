@@ -23,6 +23,8 @@ fi
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
+alias tmux="TERM=screen-256color-bce tmux"
+
 case `uname` in
   Darwin)
     EDITOR="mvim -f"
