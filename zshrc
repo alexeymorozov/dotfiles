@@ -7,6 +7,9 @@ plugins=(brew git svn gem bundler composer)
 
 source $ZSH/oh-my-zsh.sh
 
+# autocorrect is more annoying than helpful
+unsetopt correct_all
+
 export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
 export PATH="$PATH":$HOME/chromium/depot_tools
 if which brew > /dev/null 2>&1; then
