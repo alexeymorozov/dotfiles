@@ -3,7 +3,7 @@ ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
 
-plugins=(brew git github svn gem bundler composer)
+plugins=(brew git svn gem bundler composer)
 
 source $ZSH/oh-my-zsh.sh
 
