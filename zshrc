@@ -28,19 +28,7 @@ export LANG=en_US.UTF-8
 
 alias tmux="TERM=screen-256color-bce tmux"
 
-case `uname` in
-  Darwin)
-    EDITOR="mvim -f"
-    ;;
-  Linux)
-    if which gvim > /dev/null; then
-      EDITOR="gvim -f"
-    else
-      EDITOR="vi -f"
-    fi
-    ;;
-esac
-export VISUAL=$EDITOR
+export VISUAL="vi -f"
 
 export RBENV_ROOT="${HOME}/.rbenv"
 if [ -d "${RBENV_ROOT}"  ]; then
