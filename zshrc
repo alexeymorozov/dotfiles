@@ -37,6 +37,7 @@ fi
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
+alias a='php app/console'
 alias ss=short_svn_status
 alias sd=color_svn_diff
 
