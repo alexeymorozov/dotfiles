@@ -3,7 +3,7 @@ ZSH_THEME="robbyrussell"
 DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
 
-plugins=(brew git svn gem bundler composer)
+plugins=(brew git svn gem bundler composer symfony2)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -37,7 +37,7 @@ fi
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
-alias a='php app/console'
+alias sf='php app/console'
 alias ss=short_svn_status
 alias sd=color_svn_diff
 
