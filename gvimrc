@@ -15,6 +15,9 @@ set guioptions-=b
 " disable beeping
 set vb t_vb=
 
+" change cursor color when language mappings are used
+highlight lCursor guifg=NONE guibg=DarkGreen
+
 if has('mac')
   set gfn=Monaco:h14
 elseif has('unix')

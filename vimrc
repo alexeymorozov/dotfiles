@@ -47,6 +47,11 @@ set nowrap
 set textwidth=78
 set formatoptions=tcrqwn
 
+" cyrillic input with working vim commands
+set keymap=russian-jcukenwin
+set iminsert=0
+set imsearch=0
+
 " put these in an autocmd group, so that we can delete them easily
 augroup vimrc
 
