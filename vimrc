@@ -159,15 +159,6 @@ nmap <Leader>l mQviwu`Q
 " toggle case at insert mode
 imap <C-u> <Esc>mQviw~`Qa
 
-" translate templates
-let phpvar = '<?=\s*\(CHtml::encode(\)*$*\(\_.\{-}\)\(()\)\{0,1})\{0,1};*\s*?>'
-let phpblock = '<?\(php\)*\s*\(\_.\{-}\)\(:\|;\)*\s*?>'
-nmap <Leader>ph :%s/$PHRASES\[/t[/g<CR>
-nmap <Leader>ur :%s/Url::make(/path(/g<CR>
-nmap <Leader>jj /<C-r>=phpvar<CR><CR>:s//{{ \2 }}/<CR>
-nmap <Leader>jk /<C-r>=phpblock<CR><CR>:s//<% \2 %>/<CR>
-nmap <Leader>do :s/->/\./g<CR>
-
 function! Namespace()
   return substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\', 'g')
 endfunction
