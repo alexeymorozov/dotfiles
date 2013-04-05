@@ -147,6 +147,11 @@ nmap <C-l> <C-w>l
 " yank from the cursor to the end of the line, to be consistent with C and D
 nnoremap Y y$
 
+nnoremap <Leader>y "+y
+vnoremap <Leader>y "+y
+nnoremap <Leader>p "+p
+vnoremap <Leader>p "+p
+
 nnoremap <Space> :
 
 " omni completion
