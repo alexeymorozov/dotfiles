@@ -164,6 +164,9 @@ nmap <Leader>l mQviwu`Q
 " toggle case at insert mode
 imap <C-u> <Esc>mQviw~`Qa
 
+" format JSON
+map <Leader>j !python -m json.tool<CR>
+
 function! Namespace()
   return substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\', 'g')
 endfunction
