@@ -12,9 +12,6 @@ unsetopt correct_all
 
 export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
 export PATH="$PATH":$HOME/chromium/depot_tools
-if which brew > /dev/null 2>&1; then
-  export PATH="$(brew --prefix josegonzalez/php/php54)/bin:$PATH"
-fi
 
 if [ -d "$HOME/local/bin" ] ; then
     PATH="$HOME/local/bin:$PATH"
