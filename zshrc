@@ -10,29 +10,33 @@ source $ZSH/oh-my-zsh.sh
 # autocorrect is more annoying than helpful
 unsetopt correct_all
 
-export PATH="/usr/local/sbin:/usr/local/bin:$PATH"
-export PATH="$PATH":$HOME/chromium/depot_tools
-
-if [ -d "$HOME/local/bin" ] ; then
-    PATH="$HOME/local/bin:$PATH"
-    export LD_LIBRARY_PATH="${HOME}/local/lib"
-    export LDFLAGS=-L${HOME}/local/lib
-    export CPPFLAGS=-I${HOME}/local/include
-fi
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-alias tmux="TERM=screen-256color-bce tmux"
+export PATH=/usr/local/sbin:$PATH
 
-export VISUAL="vi -f"
+if [ -d $HOME/local/bin ] ; then
+  PATH=$HOME/local/bin:$PATH
+  export LD_LIBRARY_PATH=$HOME/local/lib
+  export LDFLAGS=-L$HOME/local/lib
+  export CPPFLAGS=-I$HOME/local/include
+fi
 
-export RBENV_ROOT="${HOME}/.rbenv"
-if [ -d "${RBENV_ROOT}"  ]; then
-  export PATH="${RBENV_ROOT}/bin:${PATH}"
+export RBENV_ROOT=$HOME/.rbenv
+if [ -d $RBENV_ROOT  ]; then
+  PATH=$RBENV_ROOT/bin:$PATH
 fi
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+
+DEPOT_TOOLS=$HOME/chromium/depot_tools
+if [ -d $DEPOT_TOOLS  ]; then
+  PATH=$PATH:$DEPOT_TOOLS
+fi
+
+export VISUAL="vi -f"
+
+alias tmux="TERM=screen-256color-bce tmux"
 
 alias sf='php app/console'
 alias ss=short_svn_status
