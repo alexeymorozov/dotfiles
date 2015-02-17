@@ -43,8 +43,9 @@ set smartindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set nowrap
-set textwidth=78
+set wrap
+set linebreak
+set textwidth=0
 set formatoptions=tcrqwn
 
 " cyrillic input with working vim commands
