@@ -13,26 +13,7 @@ unsetopt correct_all
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
-export PATH=/usr/local/sbin:$PATH
-
-if [ -d $HOME/local/bin ] ; then
-  PATH=$HOME/local/bin:$PATH
-  export LD_LIBRARY_PATH=$HOME/local/lib
-  export LDFLAGS=-L$HOME/local/lib
-  export CPPFLAGS=-I$HOME/local/include
-fi
-
-export RBENV_ROOT=$HOME/.rbenv
-if [ -d $RBENV_ROOT  ]; then
-  PATH=$RBENV_ROOT/bin:$PATH
-fi
-
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
-
-DEPOT_TOOLS=$HOME/chromium/depot_tools
-if [ -d $DEPOT_TOOLS  ]; then
-  PATH=$PATH:$DEPOT_TOOLS
-fi
 
 export VISUAL="vi -f"
 
