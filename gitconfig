@@ -1,0 +1,17 @@
+[core]
+	editor = vim -f
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+[alias]
+	dc = diff --cached
+	aa = add -A
+[push]
+	default = simple
+[core]
+	excludesfile = ~/.gitignore_global
+[branch]
+	autosetuprebase = always
+[include]
+  path = .gituser
