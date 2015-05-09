@@ -8,9 +8,6 @@ plugins=(brew git gem bundler composer)
 
 source $ZSH/oh-my-zsh.sh
 
-# autocorrect is more annoying than helpful
-unsetopt correct_all
-
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 
