@@ -1,6 +1,5 @@
 ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
-DISABLE_LS_COLORS="true"
 BUNDLED_COMMANDS=(rails rubocop runnel)
 
 plugins=(brew git gem bundler composer)
