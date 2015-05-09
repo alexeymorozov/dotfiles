@@ -4,7 +4,7 @@ DISABLE_AUTO_UPDATE="true"
 DISABLE_LS_COLORS="true"
 BUNDLED_COMMANDS=(rails rubocop runnel)
 
-plugins=(brew git gem bundler composer symfony2)
+plugins=(brew git gem bundler composer)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -19,5 +19,3 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 export VISUAL="vi -f"
 
 alias tmux="TERM=screen-256color-bce tmux"
-
-alias sf='php app/console'
