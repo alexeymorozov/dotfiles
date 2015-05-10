@@ -1,9 +1,14 @@
-runtime bundle/vim-pathogen/autoload/pathogen.vim
-call pathogen#infect()
-
 set nocompatible
-syntax on
+filetype off
+
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+source ~/.vim/plugins.vim
+call vundle#end()
+
 filetype plugin indent on
+
+syntax enable
 
 let mapleader = ","
 set noesckeys
