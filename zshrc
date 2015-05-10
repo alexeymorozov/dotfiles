@@ -6,11 +6,8 @@ plugins=(brew git gem bundler composer)
 
 source $ZSH/oh-my-zsh.sh
 
-export LC_ALL=en_US.UTF-8
-export LANG=en_US.UTF-8
-
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
+export LC_ALL=en_US.UTF-8
 export VISUAL="vi -f"
-
-alias tmux="TERM=screen-256color-bce tmux"
+alias tmux="TERM=screen-256color tmux"
