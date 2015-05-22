@@ -34,14 +34,15 @@ set nowritebackup
 
 set wildmode=list:longest,full
 
-set wildignore+=.git,.realsync,.idea
+set wildignore+=.git,.idea
 set wildignore+=*.png,*.jpg,*.gif
 
-" ignore bundler and sass cache
-set wildignore+=*/vendor/gems/*,*/vendor/cache/*,*/.bundle/*,*/.sass-cache/*
+" ignore bundles
+set wildignore+=*/vendor/bundle/*
+set wildignore+=*/vendor/bundler/*
 
-" ignore composer and symfony cache
-set wildignore+=*/vendor/*,*/app/cache/*
+" ignore node modules
+set wildignore+=*/node_modules/*
 
 set smartindent
 
