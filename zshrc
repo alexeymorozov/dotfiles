@@ -12,4 +12,6 @@ export LC_ALL=en_US.UTF-8
 export VISUAL="vi -f"
 alias tmux="TERM=screen-256color tmux"
 
+ZLE_SPACE_SUFFIX_CHARS=$'&|'
+
 [[ -f ~/.zshrc.local  ]] && source ~/.zshrc.local
