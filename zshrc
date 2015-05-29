@@ -14,4 +14,6 @@ alias tmux="TERM=screen-256color tmux"
 
 ZLE_SPACE_SUFFIX_CHARS=$'&|'
 
+alias gcd='git checkout develop'
+
 [[ -f ~/.zshrc.local  ]] && source ~/.zshrc.local
