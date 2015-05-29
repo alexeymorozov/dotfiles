@@ -16,4 +16,7 @@ ZLE_SPACE_SUFFIX_CHARS=$'&|'
 
 alias gcd='git checkout develop'
 
+alias gloga='git log --oneline --decorate --color --graph --all'
+compdef _git glog=git-log
+
 [[ -f ~/.zshrc.local  ]] && source ~/.zshrc.local
