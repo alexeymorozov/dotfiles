@@ -3,7 +3,7 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'jeetsukumaran/vim-buffergator'
 Plugin 'scrooloose/nerdtree'
 Plugin 'kien/ctrlp.vim'
-Plugin 'mileszs/ack.vim'
+Plugin 'rking/ag.vim'
 
 Plugin 'tpope/vim-fugitive'
 
