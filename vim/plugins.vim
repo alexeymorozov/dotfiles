@@ -6,6 +6,7 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 
 Plugin 'szw/vim-tags'
+Plugin 'danchoi/ri.vim'
 
 Plugin 'tpope/vim-fugitive'
 
