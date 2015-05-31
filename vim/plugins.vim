@@ -6,7 +6,6 @@ Plugin 'kien/ctrlp.vim'
 Plugin 'rking/ag.vim'
 
 Plugin 'szw/vim-tags'
-Plugin 'danchoi/ri.vim'
 
 Plugin 'tpope/vim-fugitive'
 
@@ -36,4 +35,6 @@ Plugin 'leshill/vim-json'
 Plugin 'spf13/PIV'
 Plugin 'beyondwords/vim-twig'
 
+Plugin 'tpope/vim-rbenv'
+Plugin 'danchoi/ri.vim'
 Plugin 'tpope/vim-rails'
