@@ -87,6 +87,8 @@ augroup vimrc
 
 augroup END
 
+set tags+=.git/tags
+
 let g:buffergator_autoexpand_on_split = 0
 let g:buffergator_suppress_keymaps = 1
 
