@@ -14,6 +14,8 @@ alias tmux="TERM=screen-256color tmux"
 
 ZLE_SPACE_SUFFIX_CHARS=$'&|'
 
+alias gap='gapa'
+alias gdc='gdca'
 alias gcd='git checkout develop'
 
 alias ggpushu='git push origin $(current_branch) -u'
