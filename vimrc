@@ -65,7 +65,8 @@ augroup vimrc
   " delete all commands in this group
   au!
 
-  au FileType php,yaml,html,html.twig,xml,css,javascript,json,apache setl et ts=4 sw=4 sts=4 wrap
+  au FileType php,html,html.twig,xml,css,javascript,json,apache setl et ts=4 sw=4 sts=4 wrap
+  au FileType yaml setl et ts=2 sw=2 sts=2 wrap
   au FileType php setl smartindent
   au FileType text setl fo-=r
   au FileType snippets setl fo-=c
