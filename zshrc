@@ -18,8 +18,8 @@ alias gap='gapa'
 alias gdc='gdca'
 alias gcd='git checkout develop'
 
-alias ggpushu='git push origin $(current_branch) -u'
-compdef ggpush=git
+alias ggpu='git push origin $(current_branch) -u'
+compdef _git ggpu=git-push
 
 alias gloga='git log --oneline --decorate --color --graph --all'
 compdef _git gloga=git-log
