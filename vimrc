@@ -46,6 +46,8 @@ set wildignore+=*/vendor/bundler/*
 " ignore node modules
 set wildignore+=*/node_modules/*
 
+set wildignore+=*/tmp/*
+
 set smartindent
 
 set expandtab
