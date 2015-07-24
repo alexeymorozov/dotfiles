@@ -10,6 +10,8 @@ filetype plugin indent on
 
 syntax enable
 
+runtime macros/matchit.vim
+
 let mapleader = ","
 set noesckeys
 
