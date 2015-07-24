@@ -27,6 +27,7 @@ Plugin 'garbas/vim-snipmate'
 Plugin 'scrooloose/syntastic'
 
 Plugin 'vim-ruby/vim-ruby'
+Plugin 'slim-template/vim-slim'
 Plugin 'cakebaker/scss-syntax.vim'
 Plugin 'kchmck/vim-coffee-script'
 Plugin 'leshill/vim-json'
