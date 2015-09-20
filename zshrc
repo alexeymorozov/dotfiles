@@ -8,7 +8,8 @@ if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
 source $ZSH/oh-my-zsh.sh
 
-export LC_ALL=en_US.UTF-8
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
 export VISUAL="vi -f"
 alias tmux="TERM=screen-256color tmux"
 
