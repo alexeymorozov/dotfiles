@@ -2,7 +2,7 @@ ZSH=$HOME/.oh-my-zsh
 ZSH_THEME="robbyrussell"
 BUNDLED_COMMANDS=(rails foreman runnel rubocop)
 
-plugins=(brew git gem bundler)
+plugins=(brew git gem bundler jira)
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
