@@ -104,6 +104,8 @@ let NERDTreeShowHidden=1
 let g:ctrlp_working_path_mode = 0
 let g:ctrlp_max_files = 0
 
+let g:syntastic_javascript_checkers = ['eslint']
+
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>ga :Gcommit -av<CR><C-w>_
