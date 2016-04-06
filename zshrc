@@ -18,6 +18,7 @@ alias tmux="TERM=screen-256color tmux"
 
 ZLE_SPACE_SUFFIX_CHARS=$'&|'
 
+alias gan='git add --intent-to-add --all'
 alias gap='gapa'
 alias gdc='gdca'
 alias gcd='git checkout develop'
