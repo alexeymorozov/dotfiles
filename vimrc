@@ -181,6 +181,9 @@ imap <C-u> <Esc>mQviw~`Qa
 " format JSON
 map <Leader>j !python -m json.tool<CR>
 
+" remove all comments and blank lines
+nmap <Leader>dc :%g/\v^\s*(#\|$)/d<CR>
+
 function! Namespace()
   return substitute(substitute(expand("%:h"), '\v^\w+\/(\u)', '\1', ''), '\/', '\\', 'g')
 endfunction
