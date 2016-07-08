@@ -4,7 +4,9 @@ BUNDLED_COMMANDS=(rails foreman runnel rubocop)
 
 plugins=(brew git gem bundler jira)
 
-if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+# if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
+export PATH="$HOME/.rbenv/bin:$PATH"
+eval "$(rbenv init -)"
 
 export NVM_DIR=~/.nvm
 . $(brew --prefix nvm)/nvm.sh
