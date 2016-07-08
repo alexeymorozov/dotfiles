@@ -31,6 +31,6 @@ compdef _git ggpu=git-push
 alias gloga='git log --oneline --decorate --color --graph --all'
 compdef _git gloga=git-log
 
-alias gtv='git tag -n | gsort -V'
+alias gtv='git tag -n | sort -V'
 
 [[ -f ~/.zshrc.local  ]] && source ~/.zshrc.local
