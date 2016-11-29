@@ -104,6 +104,8 @@ let g:ctrlp_max_files = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
 
+:let g:notes_directories = ['~/Dropbox/Notes']
+
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>
 nmap <Leader>ga :Gcommit -av<CR><C-w>_

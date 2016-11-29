@@ -38,3 +38,6 @@ Plugin 'beyondwords/vim-twig'
 Plugin 'tpope/vim-rbenv'
 Plugin 'danchoi/ri.vim'
 Plugin 'tpope/vim-rails'
+
+Plugin 'xolox/vim-notes'
+Plugin 'xolox/vim-misc'
