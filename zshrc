@@ -6,9 +6,6 @@ plugins=(brew git gem bundler jira rails)
 
 if which rbenv > /dev/null; then eval "$(rbenv init - zsh)"; fi
 
-export NVM_DIR=~/.nvm
-. $(brew --prefix nvm)/nvm.sh
-
 source $ZSH/oh-my-zsh.sh
 
 export LC_ALL="en_US.UTF-8"
