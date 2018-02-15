@@ -121,7 +121,7 @@ nmap <Leader>v :NERDTreeFind<CR>
 nmap <Leader>b :BuffergatorOpen<CR>
 nmap <Leader>B :BuffergatorClose<CR>
 
-nmap <F5> :GundoToggle<CR>
+nmap <Leader>h :GundoToggle<CR>
 
 nmap <Leader>z :ZoomWin<CR>
 
