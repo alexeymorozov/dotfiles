@@ -36,7 +36,7 @@ set nowritebackup
 
 set wildmode=list:longest,full
 
-set wildignore+=.git,.idea
+set wildignore+=.git,.idea,pkg
 set wildignore+=*.png,*.jpg,*.gif
 
 " ignore bundles
@@ -45,6 +45,9 @@ set wildignore+=*/vendor/bundler/*
 
 " ignore node modules
 set wildignore+=*/node_modules/*
+
+" ignore elixir deps
+set wildignore+=*/deps/*
 
 set wildignore+=*/tmp/*
 
@@ -59,6 +62,8 @@ set textwidth=0
 set formatoptions=tcrqwn
 set cmdheight=2
 
+set nofixendofline
+
 set langmap=№#,ЙQ,ЦW,УE,КR,ЕT,НY,ГU,ШI,ЩO,ЗP,Х{,Ъ},ФA,ЫS,ВD,АF,ПG,РH,ОJ,ЛK,ДL,Ж:,Э\",Ё\|,ЯZ,ЧX,СC,МV,ИB,ТN,ЬM,Б<,Ю>,йq,цw,уe,кr,еt,нy,гu,шi,щo,зp,х[,ъ],фa,ыs,вd,аf,пg,рh,оj,лk,дl,ж\\;,э',ё\\\\,яz,чx,сc,мv,иb,тn,ьm,ю.,б\\,
 
 " put these in an autocmd group, so that we can delete them easily
@@ -69,6 +74,7 @@ augroup vimrc
 
   au FileType php,html,html.twig,xml,css,apache setl et ts=4 sw=4 sts=4 wrap
   au FileType yaml setl et ts=2 sw=2 sts=2 wrap
+  au FileType c setl et ts=4 sw=4 sts=4 wrap
   au FileType php setl smartindent
   au FileType text setl fo-=r
   au FileType snippets setl fo-=c
@@ -89,6 +95,8 @@ augroup vimrc
 
 augroup END
 
+autocmd BufWritePre * %s/\s\+$//e
+
 set tags+=.git/tags
 
 let g:buffergator_autoexpand_on_split = 0
@@ -104,7 +112,8 @@ let g:ctrlp_max_files = 0
 
 let g:syntastic_javascript_checkers = ['eslint']
 
-:let g:notes_directories = ['~/Dropbox/Notes']
+:let g:notes_directories = ['~/Yandex.Disk.localized/notes']
+:let g:notes_smart_quotes = 0
 
 nmap <Leader>gs :Gstatus<CR>
 nmap <Leader>gd :Gdiff<CR>

@@ -19,7 +19,7 @@ set vb t_vb=
 highlight lCursor guifg=NONE guibg=DarkGreen
 
 if has('mac')
-  set gfn=DejaVu\ Sans\ Mono:h18
+  set gfn=DejaVu\ Sans\ Mono:h16
 elseif has('unix')
-  set gfn=Ubuntu\ Mono\ 18
+  set gfn=Ubuntu\ Mono\ 16
 endif

@@ -1,1 +1,1 @@
-gem: --document ri
+gem: --no-document

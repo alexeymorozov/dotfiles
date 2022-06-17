@@ -19,10 +19,14 @@ Plugin 'tpope/vim-unimpaired'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-abolish'
 Plugin 'scrooloose/nerdcommenter'
+Plugin 'kana/vim-textobj-user'
+Plugin 'rhysd/vim-textobj-anyblock'
+Plugin 'nelstrom/vim-textobj-rubyblock'
 
 Plugin 'MarcWeber/vim-addon-mw-utils'
 Plugin 'tomtom/tlib_vim'
 Plugin 'garbas/vim-snipmate'
+Plugin 'honza/vim-snippets'
 
 Plugin 'scrooloose/syntastic'
 

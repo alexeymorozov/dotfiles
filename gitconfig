@@ -14,3 +14,5 @@
 	path = .gituser
 [fetch]
 	prune = true
+[user]
+	name = Alexey Morozov
